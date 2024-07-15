@@ -13,14 +13,17 @@ const Home = () => {
     img.onload = () => {
       setImageLoaded(true);
     };
-    img.src = '/Me.jpeg'; // Replace with your actual image URL
+    img.src = `${process.env.PUBLIC_URL}/Me.jpeg`; 
   }, []);
 
   return (
     <section className="home">
       <div className="left-side">
-      <div className={`image ${imageLoaded ? 'loaded' : ''}`} style={{ backgroundImage: `url('/Me.jpeg')` }}></div>
-      </div>
+      <div
+          className={`image ${imageLoaded ? 'loaded' : ''}`}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/Me.jpeg)` }}
+        ></div>    
+          </div>
       <div className="right-side">
         <div className="content">
         <h1>Edwin Gomez
