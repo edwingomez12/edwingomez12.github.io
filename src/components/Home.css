@@ -18,7 +18,12 @@
     background: url('/public/Me.jpeg') no-repeat center center/cover;
     border-radius: 15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 1s ease-out; /* Added opacity transition */
+    opacity: 0; /* Start with opacity 0 to create a loading effect */
+  }
+  
+  .image.loaded {
+    opacity: 1; /* Fade in the image when loaded */
   }
   
   .image:hover {
