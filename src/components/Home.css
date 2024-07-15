@@ -1,29 +1,37 @@
+/* Basic styles for the Home component */
 .home {
     display: flex;
+    flex-direction: column;
     height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
   }
   
+  /* Styles for the left-side and image container */
   .left-side {
-    flex: 0 0 40%; /* Adjust this value to control the width of the left side */
+    flex: 0 0 40%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    margin-bottom: 20px; /* Add some space below the image */
   }
   
   .image {
-    width: 80%; /* Adjust this value to control the size of the image */
-    height: 80%;
-    background: url('/public/Me.jpeg') no-repeat center center/cover;
+    width: 100%; /* Make the image take full width */
+    max-width: 400px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    background-size: cover;
+    background-position: center;
     border-radius: 15px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, filter 0.3s ease, opacity 1s ease-out; /* Added opacity transition */
-    opacity: 0; /* Start with opacity 0 to create a loading effect */
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 1s ease-out;
+    opacity: 0;
   }
   
   .image.loaded {
-    opacity: 1; /* Fade in the image when loaded */
+    opacity: 1;
   }
   
   .image:hover {
@@ -31,6 +39,7 @@
     filter: brightness(1.1);
   }
   
+  /* Styles for the right-side and content */
   .right-side {
     flex: 1;
     background-color: #000;
@@ -38,15 +47,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 20px;
   }
   
   .right-side .content {
     max-width: 600px;
+    text-align: center;
   }
   
   .right-side h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   
@@ -54,6 +64,7 @@
     font-size: 1.25rem;
   }
   
+  /* Responsive styles for smaller screens */
   @media (min-width: 768px) {
     .home {
       flex-direction: row;
@@ -69,3 +80,4 @@
       font-size: 3rem;
     }
   }
+  
