@@ -54,3 +54,18 @@
     font-size: 1.25rem;
   }
   
+  @media (min-width: 768px) {
+    .home {
+      flex-direction: row;
+      padding: 0;
+    }
+  
+    .left-side {
+      flex: 0 0 40%;
+      margin-bottom: 0;
+    }
+  
+    .right-side h1 {
+      font-size: 3rem;
+    }
+  }
