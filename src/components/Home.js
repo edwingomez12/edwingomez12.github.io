@@ -5,9 +5,12 @@ import './Home.css';
 const Home = () => {
   return (
     <section className="home">
-      <div className="container">
-        <h1>
-            Edwin Gomez
+      <div className="left-side">
+        <div className="image"></div>
+      </div>
+      <div className="right-side">
+        <div className="content">
+        <h1>Edwin Gomez
         </h1>
         <h2>
           <ReactTyped
@@ -17,6 +20,7 @@ const Home = () => {
             loop
           />
         </h2>
+        </div>
       </div>
     </section>
   );
