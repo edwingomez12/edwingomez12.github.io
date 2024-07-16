@@ -4,12 +4,13 @@
   }
   
   .left-side {
-    flex: 0 0 40%; /* Adjust this value to control the width of the left side */
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    margin-bottom: 20px; /* Add some space below the image */
   }
   
   .image {
