@@ -18,6 +18,12 @@ const Projects = () => {
             <p>Worked on the credit team to help migrate on-premises applications to the cloud in Azure. Used .NET framework to build Azure functions to facilitate credit application processing from dealerships.</p>
           </div>
         </div>
+        <div className="certifications">
+          <h2>Certifications</h2>
+          <div className="badges">
+            <img src={`${process.env.PUBLIC_URL}/az204.png`} alt="Certification 1" />
+          </div>
+        </div>
       </div>
     </section>
   );
